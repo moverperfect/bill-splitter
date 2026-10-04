@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bill-splitter",
+  "compatibility_date": "2026-09-30",
+  // Static assets only: the app is a client-side PWA with no server code.
+  "assets": {
+    "directory": "./dist"
+  },
+  // Forking? Change this to your own domain, or delete it to deploy to <name>.<account>.workers.dev.
+  "routes": [{ "pattern": "splitter.moverperfect.com", "custom_domain": true }]
+}
