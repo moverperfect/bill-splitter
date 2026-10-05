@@ -7,5 +7,7 @@
     "directory": "./dist"
   },
   // Forking? Change this to your own domain, or delete it to deploy to <name>.<account>.workers.dev.
-  "routes": [{ "pattern": "splitter.moverperfect.com", "custom_domain": true }]
+  "routes": [{ "pattern": "splitter.moverperfect.com", "custom_domain": true }],
+  // Lets Workers Builds publish a preview for non-production branches (`wrangler preview`).
+  "previews": {}
 }
