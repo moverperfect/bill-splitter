@@ -47,7 +47,7 @@ describe('tripBalances', () => {
     expect(balances.people.reduce((sum, p) => sum + p.shareMinor, 0)).toBe(totalPaid)
   })
 
-  it('reproduces the original spreadsheet dinner in the demo', () => {
+  it('includes the reference dinner in the demo', () => {
     const trip = demoTrip()
     const dinner = trip.bills.find((b) => b.name === 'Dinner in Tirana')!
     const result = computeBill(dinner, 'GBP')

@@ -39,7 +39,7 @@ function bill(partial: Partial<Bill>): Bill {
   }
 }
 
-// A real dinner in Albania, checked against the spreadsheet this app replaced.
+// A real dinner, checked by hand.
 const albania = bill({
   lines: [
     item('Wine', '350', ['tom']),
@@ -58,7 +58,7 @@ const albania = bill({
 })
 
 describe('computeBill', () => {
-  it('reproduces the Albania dinner from the original spreadsheet', () => {
+  it('splits the Albania dinner by item', () => {
     const result = computeBill(albania, 'GBP')
     expect(result.status).toBe('balanced')
     expect(result.itemSubtotal).toBe(7900)
@@ -126,7 +126,7 @@ describe('computeBill', () => {
     expect(result.localShares.alex).toBe(900)
   })
 
-  it('ignores blank lines, like empty spreadsheet rows', () => {
+  it('ignores blank lines', () => {
     const result = computeBill(bill({ lines: [item('Pizza', '950', ['alex']), item('', '', [])] }), 'GBP')
     expect(result.status).toBe('balanced')
   })

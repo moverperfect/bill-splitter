@@ -20,7 +20,7 @@ On a trip abroad, splitting a restaurant bill fairly means several steps:
 2. Sharing the tip and any shared plates.
 3. Converting the result to the currency the group settles up in, at the rate you actually paid.
 
-I first did this in a spreadsheet. This app replaces it, with the spreadsheet's results kept as regression tests: one tap per person per dish, and the totals add up to the penny.
+This app does all three: one tap per person per dish, and the totals add up to the penny.
 
 ## Features
 
